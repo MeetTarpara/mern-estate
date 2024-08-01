@@ -7,7 +7,7 @@ import About from './pages/About';
 import Profile from './pages/Profile';
 
 export default function App() {
-  return (5y m,kuu
+  return (
     <>
     <BrowserRouter>
       <Routes>
@@ -24,4 +24,3 @@ export default function App() {
   )
 }
 
-5
