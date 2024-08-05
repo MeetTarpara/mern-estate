@@ -27,3 +27,9 @@ export const signup = async (req,res,next) => {
 
  
 };
+
+export const test1 = (req , res) => {
+    res.json({
+        message : "Hello World!!"
+    })
+};
