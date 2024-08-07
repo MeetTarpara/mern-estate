@@ -7,6 +7,9 @@ import dotenv from 'dotenv';
 import userRouter from './routes/user_routes.js';
 import authRouter from './routes/auth_route.js';
 import cookieParser from 'cookie-parser';
+
+import listingRouter from './routes/listing_route.js';
+
 dotenv.config();
 
 mongoose
@@ -33,6 +36,8 @@ app.listen(3000,() => {
 
 app.use("/api/user",userRouter);
 app.use("/api/auth",authRouter);
+app.use("/api/listing",listingRouter);
+
 
 
 //use middeleware for error hendaling
