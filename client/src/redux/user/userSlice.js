@@ -29,31 +29,43 @@ const userSlice = createSlice({
         },
         updateUserStart: (state) => {
             state.loading = true;
-          },
-          updateUserSuccess: (state, action) => {
+        },
+        updateUserSuccess: (state, action) => {
             state.currentUser = action.payload;
             state.loading = false;
             state.error = null;
-          },
-          updateUserFailure: (state, action) => {
+        },
+        updateUserFailure: (state, action) => {
             state.error = action.payload;
             state.loading = false;
-          },
-          deleteUserStart: (state) => {
+        },
+        deleteUserStart: (state) => {
             state.loading = true;
-          },
-          deleteUserSuccess: (state) => {
+        },
+        deleteUserSuccess: (state) => {
             state.currentUser = null;
             state.loading = false;
             state.error = null;
-          },
-          deleteUserFailure: (state, action) => {
+        },
+        deleteUserFailure: (state, action) => {
             state.error = action.payload;
             state.loading = false;
-          },
+        },
+        signOutUserStart: (state) => {
+            state.loading = true;
+        },
+        signOutUserSuccess: (state) => {
+            state.currentUser = null;
+            state.loading = false;
+            state.error = null;
+        },
+        signOutUserFailure: (state, action) => {
+            state.error = action.payload;
+            state.loading = false;
+        },
     }
 });
 
-export const { signInStart, signInSuccess, signInFailure,updateUserStart,updateUserFailure,updateUserSuccess,deleteUserFailure,deleteUserStart,deleteUserSuccess } = userSlice.actions;
+export const { signInStart, signInSuccess, signInFailure, updateUserStart, updateUserFailure, updateUserSuccess, deleteUserFailure, deleteUserStart, deleteUserSuccess ,signOutUserFailure,signOutUserStart,signOutUserSuccess } = userSlice.actions;
 
 export default userSlice.reducer;
